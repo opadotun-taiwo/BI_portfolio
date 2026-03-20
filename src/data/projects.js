@@ -119,12 +119,12 @@ const projects = [
   },
   {
     id: 6,
-    title: "NYC Taxi Data Pipeline (GCP)",
+    title: "Monthly batch data processing for NYC Taxi Data Pipeline (GCP)",
     category: "Data Engineering",
     cover_image: "/images/taxi/main.png",
     images: ["/images/taxi/1.png", "/images/taxi/2.png"],
     summary: "Built production-grade pipeline for large-scale taxi data with star schema modeling.",
-    techStack: ["dlt", "BigQuery", "GCS", "Python"],
+    techStack: ["dlt", "dbt", "BigQuery", "GCS", "Python"],
     story: {
       objective: "Build production-grade pipeline for large-scale taxi data",
       data_source: "",

@@ -70,13 +70,12 @@ export default function Hero() {
           {['Data Analyst', 'BI Developer', 'Data Engineer'].map((role, i) => (
             <span
               key={role}
-              className={`px-4 py-1.5 text-sm font-semibold rounded-full ${
-                i === 0
-                  ? 'bg-teal-700/10 text-teal-700 dark:bg-teal-400/10 dark:text-teal-300 border border-teal-300/30'
-                  : i === 1
+              className={`px-4 py-1.5 text-sm font-semibold rounded-full ${i === 0
+                ? 'bg-teal-700/10 text-teal-700 dark:bg-teal-400/10 dark:text-teal-300 border border-teal-300/30'
+                : i === 1
                   ? 'bg-coral-500/10 text-coral-600 dark:bg-coral-400/10 dark:text-coral-300 border border-coral-300/30'
                   : 'bg-teal-300/15 text-teal-800 dark:bg-teal-300/10 dark:text-teal-200 border border-teal-200/30'
-              }`}
+                }`}
             >
               {role}
             </span>
@@ -91,7 +90,7 @@ export default function Hero() {
           className="text-base sm:text-lg text-sand-600 dark:text-sand-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Turning raw data into actionable business insights. 3+ years experience
-          across fintech, consulting, and development programs.
+          across fintech, consulting, and development programs. #Google cloud certified
         </motion.p>
 
         {/* CTAs */}
