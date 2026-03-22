@@ -56,8 +56,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-6"
         >
-          Hi, I'm{' '}
-          <span className="gradient-text">Opadotun Taiwo</span>
+          Hi, I'm a{' '}
+          <span className="gradient-text">BI Engineer</span>
         </motion.h1>
 
         {/* Role Tags */}
@@ -67,7 +67,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex flex-wrap items-center justify-center gap-3 mb-6"
         >
-          {['Data Analyst', 'BI Developer', 'Data Engineer'].map((role, i) => (
+          {['Data Analyst', 'BI Developer', 'Data Engineering'].map((role, i) => (
             <span
               key={role}
               className={`px-4 py-1.5 text-sm font-semibold rounded-full ${i === 0
@@ -90,7 +90,7 @@ export default function Hero() {
           className="text-base sm:text-lg text-sand-600 dark:text-sand-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Turning raw data into actionable business insights. 3+ years experience
-          across fintech, consulting, and development programs. #Google cloud certified
+          across fintech and consulting making sure data operations is seamless. <br /><strong>#Google cloud certified</strong>
         </motion.p>
 
         {/* CTAs */}

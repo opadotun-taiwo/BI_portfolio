@@ -53,7 +53,7 @@ const skillGroups = [
     tagBg: 'bg-coral-50 dark:bg-coral-500/10 border-coral-200/50 dark:border-coral-600/20 text-coral-600 dark:text-coral-300',
     skills: [
       { name: 'Microsoft Fabric', icon: HiCube },
-      { name: 'Python', icon: HiServer }
+      { name: 'Google Cloud Platform', icon: HiServer }
     ],
   },
 ];

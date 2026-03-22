@@ -28,7 +28,7 @@ const projects = [
       ],
       outcome: "Delivered a comprehensive workforce dashboard for decision-making"
     },
-    link: "https://github.com/opadotun-taiwo",
+    link: "https://github.com/opadotun-taiwo/data-visualization",
     demo: ""
   },
   {
@@ -49,7 +49,7 @@ const projects = [
       challenges: [],
       outcome: "Improved visibility into call performance and routing efficiency"
     },
-    link: "https://github.com/opadotun-taiwo",
+    link: "https://github.com/opadotun-taiwo/data-visualization",
     demo: ""
   },
   {
@@ -72,7 +72,7 @@ const projects = [
       ],
       outcome: "Provided accurate retention insights for marketing decisions"
     },
-    link: "",
+    link: "https://github.com/opadotun-taiwo/data-visualization",
     demo: ""
   },
   {
@@ -85,7 +85,7 @@ const projects = [
     techStack: ["Excel"],
     story: {
       objective: "Provide executive-level sales insights",
-      data_source: "",
+      data_source: "Dummy data from chatgpt",
       tools: ["Excel"],
       modeling: "",
       approach: "Built interactive dashboard with YoY metrics",
@@ -106,10 +106,10 @@ const projects = [
     techStack: ["Python", "Docker", "Airflow", "BigQuery", "dbt"],
     story: {
       objective: "Build pipeline from API to warehouse",
-      data_source: "",
-      tools: ["Python", "Docker", "Airflow", "BigQuery", "dbt"],
+      data_source: "USA Weather API",
+      tools: ["Python", "Docker", "Airflow", "BigQuery", "dbt", "Superset"],
       modeling: "",
-      approach: "API ingestion → warehouse → transformation → orchestration",
+      approach: "API ingestion(Python script) → warehouse(Big query) → transformation(dbt) → orchestration(Airflow) + Visualization (Superset)",
       features: "",
       challenges: [],
       outcome: "Automated daily weather analytics pipeline"
@@ -123,14 +123,14 @@ const projects = [
     category: "Data Engineering",
     cover_image: "/images/taxi/main.png",
     images: ["/images/taxi/1.png", "/images/taxi/2.png"],
-    summary: "Built production-grade pipeline for large-scale taxi data with star schema modeling.",
-    techStack: ["dlt", "dbt", "BigQuery", "GCS", "Python"],
+    summary: "Built production-grade pipeline for large-scale taxi data with schema modeling for BI reporting and ML.",
+    techStack: ["dlt", "dbt", "BigQuery", "GCS", "Python", "Superset"],
     story: {
       objective: "Build production-grade pipeline for large-scale taxi data",
-      data_source: "",
-      tools: ["dlt", "BigQuery", "GCS", "Python"],
+      data_source: "NYC taxi data",
+      tools: ["dlt", "BigQuery", "GCS", "Python", "Superset"],
       modeling: "",
-      approach: "Idempotent ingestion + schema evolution + star schema modeling",
+      approach: "Idempotent ingestion + schema evolution(dlt) + GCS (data staging) + Data warehousing (Big query) +schema modeling for reporting and ml feature model (dbt) + Orchestration (Airflow) + Visualization (Superset)",
       features: "",
       challenges: [
         "Large file handling",
@@ -159,7 +159,7 @@ const projects = [
       challenges: [],
       outcome: "Reduced failure detection time to seconds"
     },
-    link: "",
+    link: "https://github.com/opadotun-taiwo/pipeline_observability_monitoring",
     demo: ""
   },
   {
@@ -173,9 +173,9 @@ const projects = [
     story: {
       objective: "Enable non-technical users query data using natural language",
       data_source: "",
-      tools: ["Python", "BigQuery", "LLM"],
+      tools: ["Python", "Duckdb", "Qwen2.5 LLM", "Streamlit"],
       modeling: "",
-      approach: "Prompt engineering + schema injection + SQL execution loop",
+      approach: "Python script + Prompt engineering + schema injection + SQL execution loop + Streamlit UI",
       features: "",
       challenges: [
         "LLM hallucination → fixed via schema grounding"

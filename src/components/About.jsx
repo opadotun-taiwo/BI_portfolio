@@ -60,10 +60,10 @@ export default function About() {
               I'm <strong className="text-sand-900 dark:text-white">Opadotun Taiwo</strong>, a data analyst with 3+ years of experience turning raw data into actionable insights across fintech, consulting, and development programs.
             </p>
             <p className="text-sand-600 dark:text-sand-300 leading-relaxed mb-6">
-              My expertise spans the full data lifecycle — from building scalable <strong className="text-teal-700 dark:text-teal-300">data pipelines</strong> and <strong className="text-teal-700 dark:text-teal-300">warehouse architectures</strong> to crafting executive dashboards that drive strategic decisions.
+              My expertise spans the full data lifecycle — from building scalable <strong className="text-teal-700 dark:text-teal-300">data pipelines</strong> and <strong className="text-teal-700 dark:text-teal-300">warehouse architectures</strong> to crafting executive dashboards that drive strategic decisions. I work across teams to give visibility and forecast that support their mandate.
             </p>
             <p className="text-sand-600 dark:text-sand-300 leading-relaxed">
-              I thrive at the intersection of data engineering and business intelligence, where I connect technical implementation with real business outcomes. Whether building an ETL pipeline from scratch or designing an interactive Power BI dashboard, I focus on <strong className="text-coral-500 dark:text-coral-400">clarity, impact, and scalability</strong>.
+              I thrive at the intersection of data and business intelligence, where I connect technical implementation with real business outcomes. Whether building an ETL pipeline from scratch or designing an interactive BI dashboard, I focus on <strong className="text-coral-500 dark:text-coral-400">clarity, impact, and scalability</strong>.
             </p>
           </motion.div>
 
