@@ -18,7 +18,7 @@ const footerLinks = [
 
 const socials = [
   { icon: FaGithub, href: 'https://github.com/opadotun-taiwo', label: 'GitHub' },
-  { icon: FaLinkedin, href: 'https://linkedin.com/in/opadotun-taiwo', label: 'LinkedIn' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/taiwo-opadotun-39147117b/', label: 'LinkedIn' },
   { icon: FaTwitter, href: 'https://twitter.com/opadotuntaiwo', label: 'Twitter' },
 ];
 

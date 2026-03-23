@@ -10,28 +10,51 @@ import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
  */
 
 const contactInfo = [
-  { icon: HiMail, label: 'Email', value: 'opadotuntaiwo@gmail.com', href: 'mailto:opadotuntaiwo@gmail.com' },
+  { icon: HiMail, label: 'Email', value: 'officialopadotun2021@gmail.com', href: 'mailto:opadotuntaiwo@gmail.com' },
   { icon: HiLocationMarker, label: 'Location', value: 'Lagos, Nigeria', href: null },
 ];
 
 const socials = [
   { icon: FaGithub, label: 'GitHub', href: 'https://github.com/opadotun-taiwo' },
-  { icon: FaLinkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/opadotun-taiwo' },
+  { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/taiwo-opadotun-39147117b/' },
   { icon: FaTwitter, label: 'Twitter', href: 'https://twitter.com/opadotuntaiwo' },
 ];
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+    setStatus('sending');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '0e8709d2-49e5-4ef1-afeb-c0055b988667',  // TODO: Replace with your Web3Forms access key
+          from_name: 'Portfolio Contact Form',
+          subject: `New message from ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus('idle'), 4000);
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      console.error('Form error:', err);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 4000);
+    }
   };
 
   return (
@@ -156,11 +179,10 @@ export default function Contact() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               disabled={submitted}
-              className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${
-                submitted
-                  ? 'bg-teal-500'
-                  : 'btn-primary'
-              }`}
+              className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${submitted
+                ? 'bg-teal-500'
+                : 'btn-primary'
+                }`}
             >
               {submitted ? (
                 <>✓ Message Sent!</>
