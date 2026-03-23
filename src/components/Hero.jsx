@@ -90,7 +90,7 @@ export default function Hero() {
           className="text-base sm:text-lg text-sand-600 dark:text-sand-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Turning raw data into actionable business insights. 3+ years experience
-          across fintech and consulting making sure data operations is seamless. <br /><strong>#Google cloud certified</strong>
+          across fintech and consulting making sure data operations is seamless. <br /><strong>#Google Cloud Certified</strong>
         </motion.p>
 
         {/* CTAs */}

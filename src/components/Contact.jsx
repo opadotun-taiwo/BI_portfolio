@@ -29,21 +29,23 @@ export default function Contact() {
     setStatus('sending');
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // Using formsubmit.co which requires no domain registration or accounts
+      const response = await fetch('https://formsubmit.co/ajax/officialopadotun2021@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
-          access_key: '0e8709d2-49e5-4ef1-afeb-c0055b988667',  // TODO: Replace with your Web3Forms access key
-          from_name: 'Portfolio Contact Form',
-          subject: `New message from ${formData.name}`,
-          name: formData.name,
+          _subject: `New portfolio message from ${formData.name}`,
           email: formData.email,
+          name: formData.name,
           message: formData.message,
         }),
       });
 
       const data = await response.json();
-      if (data.success) {
+      if (data.success || response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setStatus('idle'), 4000);
@@ -178,14 +180,20 @@ export default function Contact() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              disabled={submitted}
-              className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${submitted
+              disabled={status === 'sending' || status === 'success'}
+              className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${status === 'success'
                 ? 'bg-teal-500'
-                : 'btn-primary'
+                : status === 'error'
+                  ? 'bg-red-500'
+                  : 'btn-primary'
                 }`}
             >
-              {submitted ? (
+              {status === 'sending' ? (
+                <>Sending...</>
+              ) : status === 'success' ? (
                 <>✓ Message Sent!</>
+              ) : status === 'error' ? (
+                <>❌ Error! Try again</>
               ) : (
                 <>
                   <HiPaperAirplane className="w-5 h-5 rotate-90" />
