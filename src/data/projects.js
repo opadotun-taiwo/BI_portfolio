@@ -8,27 +8,37 @@
 const projects = [
   {
     id: 1,
-    title: "HR Analytics – Workforce Optimization",
+    title: "Loan Application Analytics – Credit Risk Monitoring",
     category: "Data Analytics",
-    cover_image: "/images/hr/main.png",
-    images: ["/images/hr/1.png", "/images/hr/2.png", "/images/hr/3.png"],
-    summary: "Interrogated HR database to extract actionable insights to improve staff strength and operational efficiency.",
-    techStack: ["Power BI", "DAX"],
+    cover_image: "/images/loan/main.png",
+    images: [
+      "/images/loan/1.png",
+      "/images/loan/2.png",
+      "/images/loan/3.png",
+    ],
+    summary: "Analyzed loan application data to assess credit risk, repayment behavior, and profitability, enabling data-driven decisions on whether to continue the loan feature.",
+
+    techStack: ["Power BI", "DAX", "MySQL", "Power Automate"],
+
     story: {
-      objective: "Interrogated HR database to extract actionable insights to improve staff strength and operational efficiency.",
-      data_source: "Excel live sheet",
-      tools: ["Power BI", "DAX"],
-      modeling: "Two-table schema with Employee ID relationship",
-      approach: "Built DAX measures (CALCULATE, IF, COUNTROWS) for promotion and appraisal tracking",
-      features: "",
+      objective: "To evaluate loan performance, measure risk (good vs bad loans), and determine if the loan application feature should be continued.",
+
+      data_source: "MySQL database containing loan applications, repayment data, and customer/state information",
+
+      tools: ["Power BI", "DAX", "MySQL", "Power Automate"],
+
+      modeling: "Star-like schema with fact table (financial_loan) and dimension table (state_mapping) joined via state code",
+      approach: "Built DAX measures (CALCULATE, COUNTROWS, DIVIDE) to analyze loan performance, profitability, and good-to-bad loan ratios. Designed interactive dashboards for state-level and overall insights, and automated reporting using Power Automate.",
+
+      features: "Interactive dashboard with KPI tracking, state-level analysis, profitability insights, and automated CFO reporting",
       challenges: [
-        "Ambiguity in promotion criteria → resolved via stakeholder interviews",
-        "Missing location data",
-        "Complex performance rating logic → validated with stakeholders"
+        "MySQL password access issue → resolved by resetting root password using init-file method",
+        "State code mapping (e.g., CA → California) → created mapping table for accurate segmentation",
+        "Automating state-level reports using Power Automate → required DAX query optimization and formatting"
       ],
-      outcome: "Delivered a comprehensive workforce dashboard for decision-making"
+      outcome: "Identified a strong 6:1 good-to-bad loan ratio (~86% repayment rate), leading to the recommendation to continue the loan feature with improved targeting (e.g., employees with 10+ years experience)."
     },
-    link: "https://github.com/opadotun-taiwo/data-visualization",
+    link: "https://github.com/opadotun-taiwo/creadit_risk_monitoring",
     demo: ""
   },
   {
@@ -77,24 +87,41 @@ const projects = [
   },
   {
     id: 4,
-    title: "Executive Sales Dashboard",
-    category: "Business Intelligence",
-    cover_image: "/images/sales/main.png",
-    images: ["/images/sales/1.png", "/images/sales/2.png"],
-    summary: "Provided executive-level sales insights with interactive YoY metrics.",
-    techStack: ["Excel"],
+    title: "RFM Analysis for Customer Segmentation & Revenue Growth",
+    category: "Data Analytics",
+    cover_image: "/images/RFM/main.png",
+    images: [
+      "/images/RFM/1.jpg",
+      "/images/RFM/main.png"
+    ],
+    summary: "Segmented customers using RFM analysis to identify high-value and dormant users, leading to targeted reactivation strategies and measurable revenue growth.",
+
+    techStack: ["SQL", "BigQuery", "Metabase"],
+
     story: {
-      objective: "Provide executive-level sales insights",
-      data_source: "Dummy data from chatgpt",
-      tools: ["Excel"],
-      modeling: "",
-      approach: "Built interactive dashboard with YoY metrics",
-      features: "",
-      challenges: [],
-      outcome: "Enabled leadership to track performance trends easily"
+      objective: "To segment customers based on behavior (recency, frequency, and monetary value) and drive targeted strategies to improve retention and revenue.",
+
+      data_source: "Customer transaction data stored in BigQuery",
+
+      tools: ["SQL", "BigQuery", "Metabase"],
+
+      modeling: "Aggregated customer-level dataset using SQL to compute Recency, Frequency, and Monetary (RFM) metrics",
+
+      approach: "Wrote SQL queries to calculate RFM features, scored and segmented customers into categories (e.g., high-value, loyal, at-risk, dormant). Visualized segments and trends using Metabase dashboards for business stakeholders.",
+
+      features: "Customer segmentation dashboard highlighting high-value customers, churn risk, and revenue contribution by segment",
+
+      challenges: [
+        "Defining meaningful RFM thresholds for segmentation",
+        "Handling inconsistent transaction history across customers",
+        "Translating raw SQL outputs into business-friendly segments"
+      ],
+
+      outcome: "Successfully reactivated 20% of dormant customers within one month, resulting in a 5.2% increase in overall revenue."
     },
-    link: "",
-    demo: "https://youtu.be/R8gWQYKUGLw"
+
+    link: "https://github.com/opadotun-taiwo/RFM",
+    demo: ""
   },
   {
     id: 5,
@@ -183,6 +210,31 @@ const projects = [
       outcome: "Democratized data access across teams"
     },
     link: "https://github.com/opadotun-taiwo/NLP_datawarehouse",
+    demo: ""
+  },
+  {
+    id: 9,
+    title: "HR Analytics – Workforce Optimization",
+    category: "Data Analytics",
+    cover_image: "/images/hr/main.png",
+    images: ["/images/hr/1.png", "/images/hr/2.png", "/images/hr/3.png"],
+    summary: "Interrogated HR database to extract actionable insights to improve staff strength and operational efficiency.",
+    techStack: ["Power BI", "DAX"],
+    story: {
+      objective: "Interrogated HR database to extract actionable insights to improve staff strength and operational efficiency.",
+      data_source: "Excel live sheet",
+      tools: ["Power BI", "DAX"],
+      modeling: "Two-table schema with Employee ID relationship",
+      approach: "Built DAX measures (CALCULATE, IF, COUNTROWS) for promotion and appraisal tracking",
+      features: "",
+      challenges: [
+        "Ambiguity in promotion criteria → resolved via stakeholder interviews",
+        "Missing location data",
+        "Complex performance rating logic → validated with stakeholders"
+      ],
+      outcome: "Delivered a comprehensive workforce dashboard for decision-making"
+    },
+    link: "https://github.com/opadotun-taiwo/data-visualization",
     demo: ""
   }
 ];
