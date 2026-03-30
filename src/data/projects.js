@@ -125,14 +125,14 @@ const projects = [
   },
   {
     id: 5,
-    title: "Weather Data Pipeline",
+    title: "Weather ELT Data Pipeline",
     category: "Data Engineering",
     cover_image: "/images/weather/main.png",
     images: ["/images/weather/1.png", "/images/weather/2.png"],
     summary: "Built an automated daily weather analytics pipeline from API to warehouse.",
     techStack: ["Python", "Docker", "Airflow", "BigQuery", "dbt"],
     story: {
-      objective: "Build pipeline from API to warehouse",
+      objective: "Build ELT pipeline from API to warehouse",
       data_source: "USA Weather API",
       tools: ["Python", "Docker", "Airflow", "BigQuery", "dbt", "Superset"],
       modeling: "",
@@ -146,7 +146,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Monthly batch data processing for NYC Taxi Data Pipeline (GCP)",
+    title: "Monthly ELT batch data processing for NYC Taxi Data Pipeline (GCP)",
     category: "Data Engineering",
     cover_image: "/images/taxi/main.png",
     images: ["/images/taxi/1.png", "/images/taxi/2.png"],

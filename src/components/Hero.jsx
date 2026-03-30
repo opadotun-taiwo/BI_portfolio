@@ -89,8 +89,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="text-base sm:text-lg text-sand-600 dark:text-sand-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Turning raw data into actionable business insights. 3+ years experience
-          across fintech and consulting making sure data operations is seamless. <br /><strong>#Google Cloud Certified</strong>
+          Looking for someone to turn your data into structured, revenue-driving products?
+          I have spent the last 3+ years helping companies build data solutions that improve operations and generate real business impact. <br /><strong>#Google Cloud Certified</strong>
         </motion.p>
 
         {/* CTAs */}

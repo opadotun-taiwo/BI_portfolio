@@ -57,13 +57,15 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-lg text-sand-600 dark:text-sand-300 leading-relaxed mb-6">
-              I'm <strong className="text-sand-900 dark:text-white">Opadotun Taiwo</strong>, a data analyst with 3+ years of experience turning raw data into actionable insights across fintech, consulting, and development programs.
+              I help organizations turn raw data into revenue-driving products. With 3+ years of experience, I’ve worked with large-scale datasets supporting businesses generating over <strong className="text-coral-500 dark:text-coral-400">₦12B+ in monthly revenue</strong>.
             </p>
+
             <p className="text-sand-600 dark:text-sand-300 leading-relaxed mb-6">
-              My expertise spans the full data lifecycle — from building scalable <strong className="text-teal-700 dark:text-teal-300">data pipelines</strong> and <strong className="text-teal-700 dark:text-teal-300">warehouse architectures</strong> to crafting executive dashboards that drive strategic decisions. I work across teams to give visibility and forecast that support their mandate.
+              I build scalable <strong className="text-teal-700 dark:text-teal-300">ETL data pipelines</strong>, <strong className="text-teal-700 dark:text-teal-300">warehouse architectures</strong>, and <strong className="text-teal-700 dark:text-teal-300">AI-driven solutions</strong> that turn data into actionable tools for business teams and increase adoption with internal teams.
             </p>
+
             <p className="text-sand-600 dark:text-sand-300 leading-relaxed">
-              I thrive at the intersection of data and business intelligence, where I connect technical implementation with real business outcomes. Whether building an ETL pipeline from scratch or designing an interactive BI dashboard, I focus on <strong className="text-coral-500 dark:text-coral-400">clarity, impact, and scalability</strong>.
+              My focus is on delivering systems that drive <strong className="text-coral-500 dark:text-coral-400">measurable impact, better decisions, and business growth</strong>.
             </p>
           </motion.div>
 
