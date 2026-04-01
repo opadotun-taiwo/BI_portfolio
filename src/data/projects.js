@@ -41,8 +41,34 @@ const projects = [
     link: "https://github.com/opadotun-taiwo/creadit_risk_monitoring",
     demo: ""
   },
+  ,
   {
     id: 2,
+    title: "Family Spending Analysis & Tax Liability Dashboard",
+    category: "Data Analytics",
+    cover_image: "/images/family/main.png",
+    images: ["/images/family/1.png", "/images/family/2.png"],
+    summary: "Built an interactive dashboard to track family spending patterns and compute monthly tax liability based on Nigeria’s tax framework.",
+    techStack: ["SQL", "Power BI", "DAX"],
+    story: {
+      objective: "Enable families to monitor spending behavior and easily understand their monthly tax obligations without manual calculations.",
+      data_source: "SQL Database",
+      tools: ["SQL", "Power BI", "DAX"],
+      modeling: "Star schema with transaction fact table and supporting dimensions (Role, Category, Date)",
+      approach: "Transformed raw financial data using SQL and built DAX measures to calculate income, expenses, and dynamic tax liability based on income thresholds and conditions",
+      features: "Role-based income filtering (Dad & Mum), automated tax band calculation, conditional tax relief logic, and monthly spending insights by category",
+      challenges: [
+        "Handling inconsistent transaction classifications (income vs expense)",
+        "Mapping tax rules into dynamic DAX logic",
+        "Ensuring accurate role-based filtering across related tables"
+      ],
+      outcome: "Provided a clear, automated view of household finances and tax obligations, enabling better financial planning and eliminating manual tax computation"
+    },
+    link: "",
+    demo: ""
+  },
+  {
+    id: 3,
     title: "Customer Call Center Analytics",
     category: "Data Analytics",
     cover_image: "/images/callcenter/main.png",
@@ -63,7 +89,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 3,
+    id: 5,
     title: "Marketing Cohort Analysis (User Retention)",
     category: "Data Analytics",
     cover_image: "/images/cohort/main.png",
@@ -124,7 +150,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 5,
+    id: 6,
     title: "Weather ELT Data Pipeline",
     category: "Data Engineering",
     cover_image: "/images/weather/main.png",
@@ -145,7 +171,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 6,
+    id: 7,
     title: "Monthly ELT batch data processing for NYC Taxi Data Pipeline (GCP)",
     category: "Data Engineering",
     cover_image: "/images/taxi/main.png",
@@ -169,7 +195,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 7,
+    id: 8,
     title: "Data Observability & Alerting System",
     category: "Data Engineering",
     cover_image: "/images/observability/main.png",
@@ -190,51 +216,27 @@ const projects = [
     demo: ""
   },
   {
-    id: 8,
+    id: 9,
     title: "NLP-to-SQL Data Interface",
     category: "Business Intelligence",
     cover_image: "/images/nlp/main.png",
     images: ["/images/nlp/1.png", "/images/nlp/2.png"],
-    summary: "Enabled non-technical users to query data using natural language via LLM-powered interface.",
-    techStack: ["Python", "BigQuery", "LLM"],
+    summary: "Enabled non-technical users to query data using natural language via an LLM-powered interface, packaged and deployed as a Dockerized solution for team-wide adoption.",
+    techStack: ["Python", "DuckDB", "LLM", "Streamlit", "Docker"],
     story: {
       objective: "Enable non-technical users query data using natural language",
-      data_source: "",
-      tools: ["Python", "Duckdb", "Qwen2.5 LLM", "Streamlit"],
-      modeling: "",
-      approach: "Python script + Prompt engineering + schema injection + SQL execution loop + Streamlit UI",
-      features: "",
+      data_source: "Analytical warehouse queried via SQL (DuckDB/BigQuery compatible)",
+      tools: ["Python", "DuckDB", "Qwen2.5 LLM", "Streamlit", "Docker"],
+      modeling: "Schema-aware query generation with structured table metadata injection",
+      approach: "Built a Python-based NLP-to-SQL pipeline using prompt engineering, schema grounding, and a SQL execution loop, then containerized the application with Docker for consistent deployment across environments",
+      features: "Natural language query interface, automated SQL generation, schema grounding to reduce hallucination, interactive Streamlit UI, containerized deployment for scalability",
       challenges: [
-        "LLM hallucination → fixed via schema grounding"
+        "LLM hallucination → resolved via schema grounding and controlled prompts",
+        "Ensuring consistent environment across teams → solved with Docker containerization"
       ],
-      outcome: "Democratized data access across teams"
+      outcome: "Democratized data access across teams and delivered a production-ready Docker image that enabled seamless integration and adoption by the development team"
     },
     link: "https://github.com/opadotun-taiwo/NLP_datawarehouse",
-    demo: ""
-  },
-  {
-    id: 9,
-    title: "HR Analytics – Workforce Optimization",
-    category: "Data Analytics",
-    cover_image: "/images/hr/main.png",
-    images: ["/images/hr/1.png", "/images/hr/2.png", "/images/hr/3.png"],
-    summary: "Interrogated HR database to extract actionable insights to improve staff strength and operational efficiency.",
-    techStack: ["Power BI", "DAX"],
-    story: {
-      objective: "Interrogated HR database to extract actionable insights to improve staff strength and operational efficiency.",
-      data_source: "Excel live sheet",
-      tools: ["Power BI", "DAX"],
-      modeling: "Two-table schema with Employee ID relationship",
-      approach: "Built DAX measures (CALCULATE, IF, COUNTROWS) for promotion and appraisal tracking",
-      features: "",
-      challenges: [
-        "Ambiguity in promotion criteria → resolved via stakeholder interviews",
-        "Missing location data",
-        "Complex performance rating logic → validated with stakeholders"
-      ],
-      outcome: "Delivered a comprehensive workforce dashboard for decision-making"
-    },
-    link: "https://github.com/opadotun-taiwo/data-visualization",
     demo: ""
   }
 ];
