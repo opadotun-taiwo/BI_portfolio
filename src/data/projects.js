@@ -39,7 +39,7 @@ const projects = [
       outcome: "Identified a strong 6:1 good-to-bad loan ratio (~86% repayment rate), leading to the recommendation to continue the loan feature with improved targeting (e.g., employees with 10+ years experience)."
     },
     link: "https://github.com/opadotun-taiwo/creadit_risk_monitoring",
-    demo: ""
+    demo: "https://youtu.be/IMsZshdzN9I"
   },
   ,
   {
@@ -65,7 +65,7 @@ const projects = [
       outcome: "Provided a clear, automated view of household finances and tax obligations, enabling better financial planning and eliminating manual tax computation"
     },
     link: "",
-    demo: ""
+    demo: "https://youtu.be/xzZHbj5bCY8"
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ const projects = [
       ],
       outcome: "Provided accurate retention insights for marketing decisions"
     },
-    link: "https://github.com/opadotun-taiwo/data-visualization",
+    link: "https://github.com/opadotun-taiwo/RFM",
     demo: ""
   },
   {
