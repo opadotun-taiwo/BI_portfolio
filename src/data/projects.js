@@ -9,7 +9,7 @@ const projects = [
   {
     id: 1,
     title: "Loan Application Analytics – Credit Risk Monitoring",
-    category: "Data Analytics",
+    category: "Finance Analytics",
     cover_image: "/images/loan/main.png",
     images: [
       "/images/loan/1.png",
@@ -45,7 +45,7 @@ const projects = [
   {
     id: 2,
     title: "Family Spending Analysis & Tax Liability Dashboard",
-    category: "Data Analytics",
+    category: "Finance Analytics",
     cover_image: "/images/family/main.png",
     images: ["/images/family/1.png", "/images/family/2.png"],
     summary: "Built an interactive dashboard to track family spending patterns and compute monthly tax liability based on Nigeria’s tax framework.",
@@ -70,7 +70,7 @@ const projects = [
   {
     id: 3,
     title: "Customer Call Center Analytics",
-    category: "Data Analytics",
+    category: "Marketing Analytics",
     cover_image: "/images/callcenter/main.png",
     images: ["/images/callcenter/1.png", "/images/callcenter/2.png"],
     summary: "Evaluated employee efficiency and call utilization through interactive dashboards.",
@@ -91,7 +91,7 @@ const projects = [
   {
     id: 5,
     title: "Marketing Cohort Analysis (User Retention)",
-    category: "Data Analytics",
+    category: "Marketing Analytics",
     cover_image: "/images/cohort/main.png",
     images: ["/images/cohort/1.png", "/images/cohort/2.png"],
     summary: "Analyzed user retention using cohort analysis to provide actionable marketing insights.",
@@ -114,7 +114,7 @@ const projects = [
   {
     id: 4,
     title: "RFM Analysis for Customer Segmentation & Revenue Growth",
-    category: "Data Analytics",
+    category: "Marketing Analytics",
     cover_image: "/images/RFM/main.png",
     images: [
       "/images/RFM/1.jpg",

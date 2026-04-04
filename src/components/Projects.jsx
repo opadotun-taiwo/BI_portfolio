@@ -9,15 +9,13 @@ import ProjectModal from './ProjectModal';
  * Filterable project cards with teal/coral palette.
  */
 
-const categories = ['All', 'Data Analytics', 'Data Engineering', 'Business Intelligence'];
+const categories = ['Finance Analytics', 'Marketing Analytics', 'Data Engineering', 'Business Intelligence'];
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('Finance Analytics');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const filtered = activeFilter === 'All'
-    ? projects
-    : projects.filter((p) => p.category === activeFilter);
+  const filtered = projects.filter((p) => p.category === activeFilter);
 
   return (
     <section id="projects" className="py-24 md:py-32 relative">
@@ -99,8 +97,12 @@ function ProjectCard({ project, onClick }) {
   const [imgError, setImgError] = useState(false);
 
   const categoryStyles = {
-    'Data Analytics': {
+    'Finance Analytics': {
       badge: 'bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300',
+      emoji: '📈',
+    },
+    'Marketing Analytics': {
+      badge: 'bg-teal-50 text-teal-700 dark:bg-teal-800/40 dark:text-teal-200',
       emoji: '📊',
     },
     'Data Engineering': {
