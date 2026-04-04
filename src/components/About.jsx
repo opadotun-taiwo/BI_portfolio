@@ -17,7 +17,7 @@ const highlights = [
   {
     icon: HiAcademicCap,
     title: 'Multi-Domain',
-    desc: 'Fintech and consulting',
+    desc: 'Fintech marketing and consulting',
     accent: 'from-coral-500 to-coral-400',
   },
   {
