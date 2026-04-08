@@ -32,20 +32,7 @@ const skillGroups = [
       { name: 'N8N', icon: HiChip },
     ],
   },
-  {
-    category: 'Data Engineering',
-    icon: HiCog,
-    color: 'from-teal-500 to-teal-300',
-    tagBg: 'bg-teal-50 dark:bg-teal-900/20 border-teal-200/50 dark:border-teal-700/30 text-teal-700 dark:text-teal-300',
-    skills: [
-      { name: 'dbt', icon: HiDatabase },
-      { name: 'BigQuery', icon: HiCloud },
-      { name: 'Data Pipelines', icon: HiServer },
-      { name: 'Docker', icon: HiServer },
-      { name: 'Airflow', icon: HiServer },
-      { name: 'DLT', icon: HiServer },
-    ],
-  },
+
   {
     category: 'Data platform',
     icon: HiDatabase,

@@ -9,7 +9,7 @@ import { HiArrowDown, HiCode, HiPlay } from 'react-icons/hi';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-32 pb-20">
       {/* Decorative Blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
@@ -56,8 +56,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-6"
         >
-          Hi, I'm a{' '}
-          <span className="gradient-text">BI Engineer</span>
+
+          <span className="gradient-text">Experienced Data Analyst</span>
         </motion.h1>
 
         {/* Role Tags */}
@@ -67,7 +67,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex flex-wrap items-center justify-center gap-3 mb-6"
         >
-          {['Data Analyst', 'BI Developer', 'Data Engineering'].map((role, i) => (
+          {['Data Analyst', 'BI Developer', 'Data Storyteller'].map((role, i) => (
             <span
               key={role}
               className={`px-4 py-1.5 text-sm font-semibold rounded-full ${i === 0
@@ -125,70 +125,70 @@ export default function Hero() {
 
         {/* Mascot Demo Video Prompt */}
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.7, delay: 0.8 }}
-           className="mt-12 flex justify-center cursor-pointer group"
-           onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
+          className="mt-12 flex justify-center cursor-pointer group"
+          onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <motion.div 
+          <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             className="flex items-center max-w-sm sm:max-w-md"
           >
             {/* The Blob Mascot */}
             <div className="relative z-10 w-16 h-16 shrink-0 bg-gradient-to-br from-teal-400 to-coral-400 rounded-[40%] shadow-xl flex flex-col items-center justify-center overflow-hidden border-2 border-white dark:border-sand-900 group-hover:scale-110 transition-transform duration-300">
-               {/* Eyes */}
-               <div className="flex gap-2 mt-1">
-                 <motion.div 
-                    animate={{ scaleY: [1, 0.1, 1] }}
-                    transition={{ repeat: Infinity, duration: 0.2, repeatDelay: 3 }}
-                    className="w-2.5 h-3.5 bg-white origin-center rounded-full" 
-                 />
-                 <motion.div 
-                    animate={{ scaleY: [1, 0.1, 1] }}
-                    transition={{ repeat: Infinity, duration: 0.2, repeatDelay: 3 }}
-                    className="w-2.5 h-3.5 bg-white origin-center rounded-full" 
-                 />
-               </div>
-               
-               {/* Small smile */}
-               <div className="w-3 h-1.5 border-b-2 border-white rounded-full mt-1.5 opacity-80" />
-               
-               {/* Blush */}
-               <div className="absolute bottom-3 left-2.5 w-3 h-1.5 bg-coral-600/40 rounded-full blur-[1px]" />
-               <div className="absolute bottom-3 right-2.5 w-3 h-1.5 bg-coral-600/40 rounded-full blur-[1px]" />
+              {/* Eyes */}
+              <div className="flex gap-2 mt-1">
+                <motion.div
+                  animate={{ scaleY: [1, 0.1, 1] }}
+                  transition={{ repeat: Infinity, duration: 0.2, repeatDelay: 3 }}
+                  className="w-2.5 h-3.5 bg-white origin-center rounded-full"
+                />
+                <motion.div
+                  animate={{ scaleY: [1, 0.1, 1] }}
+                  transition={{ repeat: Infinity, duration: 0.2, repeatDelay: 3 }}
+                  className="w-2.5 h-3.5 bg-white origin-center rounded-full"
+                />
+              </div>
+
+              {/* Small smile */}
+              <div className="w-3 h-1.5 border-b-2 border-white rounded-full mt-1.5 opacity-80" />
+
+              {/* Blush */}
+              <div className="absolute bottom-3 left-2.5 w-3 h-1.5 bg-coral-600/40 rounded-full blur-[1px]" />
+              <div className="absolute bottom-3 right-2.5 w-3 h-1.5 bg-coral-600/40 rounded-full blur-[1px]" />
             </div>
 
             {/* Speech Bubble */}
-            <motion.div 
-               whileHover={{ scale: 1.02 }}
-               className="relative ml-4 px-5 py-3 sm:py-4 bg-white dark:bg-sand-800 rounded-2xl shadow-xl shadow-teal-500/10 border border-teal-100 dark:border-teal-800/50 text-left transition-all group-hover:shadow-teal-500/20 group-hover:border-teal-300 dark:group-hover:border-teal-600"
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="relative ml-4 px-5 py-3 sm:py-4 bg-white dark:bg-sand-800 rounded-2xl shadow-xl shadow-teal-500/10 border border-teal-100 dark:border-teal-800/50 text-left transition-all group-hover:shadow-teal-500/20 group-hover:border-teal-300 dark:group-hover:border-teal-600"
             >
-               {/* Arrow pointing to mascot */}
-               <div className="absolute left-[-7px] top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white dark:bg-sand-800 border-l border-b border-teal-100 dark:border-teal-800/50 rotate-45 transform" />
-               <p className="text-sm font-medium text-sand-700 dark:text-sand-300 leading-relaxed">
-                 <span className="font-bold text-teal-600 dark:text-teal-400 block mb-0.5">Psst! Need proof? 👀</span>
-                 You can watch <strong className="text-coral-500 dark:text-coral-400">Video Demos</strong> of my projects inside the cards! <HiPlay className="inline-block w-4 h-4 text-coral-500 dark:text-coral-400 mb-0.5" />
-               </p>
+              {/* Arrow pointing to mascot */}
+              <div className="absolute left-[-7px] top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white dark:bg-sand-800 border-l border-b border-teal-100 dark:border-teal-800/50 rotate-45 transform" />
+              <p className="text-sm font-medium text-sand-700 dark:text-sand-300 leading-relaxed">
+                <span className="font-bold text-teal-600 dark:text-teal-400 block mb-0.5">Psst! Need proof? 👀</span>
+                You can watch <strong className="text-coral-500 dark:text-coral-400">Video Demos</strong> of my projects inside the cards! <HiPlay className="inline-block w-4 h-4 text-coral-500 dark:text-coral-400 mb-0.5" />
+              </p>
             </motion.div>
           </motion.div>
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
-           initial={{ opacity: 0 }}
-           animate={{ opacity: 1 }}
-           transition={{ delay: 1.2 }}
-           className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <motion.div
-             animate={{ y: [0, 10, 0] }}
-             transition={{ repeat: Infinity, duration: 2 }}
-             className="flex flex-col items-center gap-2 text-sand-400"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="flex flex-col items-center gap-2 text-sand-400"
           >
-             <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
-             <HiArrowDown className="w-4 h-4" />
+            <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
+            <HiArrowDown className="w-4 h-4" />
           </motion.div>
         </motion.div>
       </div>

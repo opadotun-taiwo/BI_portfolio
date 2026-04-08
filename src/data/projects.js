@@ -69,6 +69,31 @@ const projects = [
   },
   {
     id: 3,
+    title: "Sales Forecasting with SARIMA – HelloPay",
+    category: "Finance Analytics",
+    cover_image: "/images/arima/main.png",
+    images: ["/images/arima/main.png", "/images/arima/main.png"],
+    summary: "Developed a SARIMA-based time series model to forecast monthly sales for a fintech application, incorporating seasonality and trend analysis for accurate year-ahead projections.",
+    techStack: ["Python", "Pandas", "Statsmodels", "Matplotlib"],
+    story: {
+      objective: "Predict next-year monthly (MoM) sales for HelloPay to support strategic planning and revenue forecasting.",
+      data_source: "Historical sales transaction data",
+      tools: ["Python", "Pandas", "Statsmodels", "Matplotlib"],
+      modeling: "Time series modeling using SARIMA with seasonality and differencing to achieve stationarity",
+      approach: "Performed exploratory data analysis (EDA) to understand trends and seasonality, applied differencing to stabilize the series, validated stationarity using statistical tests (p-value adjustment > 0.05), and trained a SARIMA model to generate 12-month forward forecasts",
+      features: "Seasonality-aware forecasting, stationarity testing and adjustment, automated MoM prediction, and visualization of forecast vs historical trends",
+      challenges: [
+        "Non-stationary time series → resolved using differencing techniques",
+        "Selecting optimal SARIMA parameters → addressed through iterative tuning and model diagnostics",
+        "Capturing seasonality patterns in fintech transaction data"
+      ],
+      outcome: "Delivered reliable monthly sales forecasts for the next year, enabling stakeholders to plan operations and revenue strategies with data-backed projections"
+    },
+    link: "https://github.com/opadotun-taiwo/arima-sales-trend-prediction",
+    demo: ""
+  },
+  {
+    id: 4,
     title: "Customer Call Center Analytics",
     category: "Marketing Analytics",
     cover_image: "/images/callcenter/main.png",
@@ -112,7 +137,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 4,
+    id: 6,
     title: "RFM Analysis for Customer Segmentation & Revenue Growth",
     category: "Marketing Analytics",
     cover_image: "/images/RFM/main.png",
@@ -149,74 +174,9 @@ const projects = [
     link: "https://github.com/opadotun-taiwo/RFM",
     demo: ""
   },
-  {
-    id: 6,
-    title: "Weather ELT Data Pipeline",
-    category: "Data Engineering",
-    cover_image: "/images/weather/main.png",
-    images: ["/images/weather/1.png", "/images/weather/2.png"],
-    summary: "Built an automated daily weather analytics pipeline from API to warehouse.",
-    techStack: ["Python", "Docker", "Airflow", "BigQuery", "dbt"],
-    story: {
-      objective: "Build ELT pipeline from API to warehouse",
-      data_source: "USA Weather API",
-      tools: ["Python", "Docker", "Airflow", "BigQuery", "dbt", "Superset"],
-      modeling: "",
-      approach: "API ingestion(Python script) → warehouse(Big query) → transformation(dbt) → orchestration(Airflow) + Visualization (Superset)",
-      features: "",
-      challenges: [],
-      outcome: "Automated daily weather analytics pipeline"
-    },
-    link: "https://github.com/opadotun-taiwo/modern-elt-bigquery",
-    demo: ""
-  },
+
   {
     id: 7,
-    title: "Monthly ELT batch data processing for NYC Taxi Data Pipeline (GCP)",
-    category: "Data Engineering",
-    cover_image: "/images/taxi/main.png",
-    images: ["/images/taxi/1.png", "/images/taxi/2.png"],
-    summary: "Built production-grade pipeline for large-scale taxi data with schema modeling for BI reporting and ML.",
-    techStack: ["dlt", "dbt", "BigQuery", "GCS", "Python", "Superset"],
-    story: {
-      objective: "Build production-grade pipeline for large-scale taxi data",
-      data_source: "NYC taxi data",
-      tools: ["dlt", "BigQuery", "GCS", "Python", "Superset"],
-      modeling: "",
-      approach: "Idempotent ingestion + schema evolution(dlt) + GCS (data staging) + Data warehousing (Big query) +schema modeling for reporting and ml feature model (dbt) + Orchestration (Airflow) + Visualization (Superset)",
-      features: "",
-      challenges: [
-        "Large file handling",
-        "Preventing duplicates"
-      ],
-      outcome: "Scalable analytics-ready data platform"
-    },
-    link: "https://github.com/opadotun-taiwo/data_eng_end_to_end_GCP",
-    demo: ""
-  },
-  {
-    id: 8,
-    title: "Data Observability & Alerting System",
-    category: "Data Engineering",
-    cover_image: "/images/observability/main.png",
-    images: ["/images/observability/1.png", "/images/observability/2.png"],
-    summary: "Automated monitoring and alerting to reduce failure detection time to seconds.",
-    techStack: ["Airflow", "Python", "ClickHouse"],
-    story: {
-      objective: "Automate monitoring and alerting",
-      data_source: "",
-      tools: ["Airflow", "Python", "ClickHouse"],
-      modeling: "",
-      approach: "DAG + Teams webhook alerts",
-      features: "",
-      challenges: [],
-      outcome: "Reduced failure detection time to seconds"
-    },
-    link: "https://github.com/opadotun-taiwo/pipeline_observability_monitoring",
-    demo: ""
-  },
-  {
-    id: 9,
     title: "NLP-to-SQL Data Interface",
     category: "Business Intelligence",
     cover_image: "/images/nlp/main.png",

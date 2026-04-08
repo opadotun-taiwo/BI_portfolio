@@ -61,11 +61,11 @@ export default function About() {
             </p>
 
             <p className="text-sand-600 dark:text-sand-300 leading-relaxed mb-6">
-              I build scalable <strong className="text-teal-700 dark:text-teal-300">ETL data pipelines</strong>, <strong className="text-teal-700 dark:text-teal-300">warehouse architectures</strong>, and <strong className="text-teal-700 dark:text-teal-300">AI-driven solutions</strong> that turn data into actionable tools for business teams and increase adoption with internal teams.
+              I build scalable <strong className="text-teal-700 dark:text-teal-300">Reporting Models</strong>, <strong className="text-teal-700 dark:text-teal-300">Analytical Dashboards</strong>, and <strong className="text-teal-700 dark:text-teal-300">Data-driven solutions</strong> that turn data into actionable tools for business teams and increase adoption with internal teams.
             </p>
 
             <p className="text-sand-600 dark:text-sand-300 leading-relaxed">
-              My focus is on delivering systems that drive <strong className="text-coral-500 dark:text-coral-400">measurable impact, better decisions, and business growth</strong>.
+              My focus is on delivering insights that drive <strong className="text-coral-500 dark:text-coral-400">measurable impact, better decisions, and business growth</strong>.
             </p>
           </motion.div>
 

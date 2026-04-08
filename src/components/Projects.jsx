@@ -9,7 +9,7 @@ import ProjectModal from './ProjectModal';
  * Filterable project cards with teal/coral palette.
  */
 
-const categories = ['Finance Analytics', 'Marketing Analytics', 'Data Engineering', 'Business Intelligence'];
+const categories = ['Finance Analytics', 'Marketing Analytics', 'Business Intelligence'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('Finance Analytics');
@@ -105,10 +105,7 @@ function ProjectCard({ project, onClick }) {
       badge: 'bg-teal-50 text-teal-700 dark:bg-teal-800/40 dark:text-teal-200',
       emoji: '📊',
     },
-    'Data Engineering': {
-      badge: 'bg-teal-200/60 text-teal-900 dark:bg-teal-800/30 dark:text-teal-200',
-      emoji: '⚙️',
-    },
+
     'Business Intelligence': {
       badge: 'bg-coral-100 text-coral-700 dark:bg-coral-500/15 dark:text-coral-300',
       emoji: '💡',
