@@ -67,7 +67,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex flex-wrap items-center justify-center gap-3 mb-6"
         >
-          {['Data Analyst', 'BI Developer', 'Data Storyteller'].map((role, i) => (
+          {['Product Analyst', 'BI Developer', 'Growth analyst'].map((role, i) => (
             <span
               key={role}
               className={`px-4 py-1.5 text-sm font-semibold rounded-full ${i === 0

@@ -94,50 +94,31 @@ const projects = [
   },
   {
     id: 4,
-    title: "Customer Call Center Analytics",
-    category: "Marketing Analytics",
-    cover_image: "/images/callcenter/main.png",
-    images: ["/images/callcenter/1.png", "/images/callcenter/2.png"],
-    summary: "Evaluated employee efficiency and call utilization through interactive dashboards.",
-    techStack: ["Power BI", "SQL", "Power Query"],
+    title: "Customer Churn Prediction – Production ML Model Hellopay",
+    category: "Finance Analytics",
+    cover_image: "/images/churn/main.png",
+    images: ["/images/churn/1.png", "/images/churn/2.png"],
+    summary: "Built and deployed a production-grade churn prediction model using Logistic Regression, achieving high predictive performance and enabling proactive customer retention strategies.",
+    techStack: ["Python", "Scikit-learn", "Flask", "AWS Elastic Beanstalk"],
     story: {
-      objective: "Evaluate employee efficiency and call utilization",
-      data_source: "MySQL Database",
-      tools: ["Power BI", "SQL", "Power Query"],
-      modeling: "Star schema with calendar and manager dimension",
-      approach: "Built slicers and validated results with SQL queries",
-      features: "",
-      challenges: [],
-      outcome: "Improved visibility into call performance and routing efficiency"
+      objective: "Predict customer churn accurately to enable early intervention and improve customer retention for the business using batch prediction.",
+      data_source: "SQL generated data with custom times series and behavioral featureswith 31 features and over 23000 customers",
+      tools: ["Python", "Scikit-learn", "Flask", "AWS Elastic Beanstalk"],
+      modeling: "Supervised classification using Logistic Regression with feature engineering and model evaluation using ROC-AUC",
+      approach: "Conducted data preprocessing and feature engineering, addressed data leakage issues by aligning training and test timelines, trained multiple models, and selected Logistic Regression based on performance. Built a Flask API to serve predictions and deployed the model on AWS Elastic Beanstalk for production use using custom docker image",
+      features: "Batch churn prediction API, model performance monitoring via ROC-AUC, production deployment on AWS, and scalable REST endpoint for integration with other systems",
+      challenges: [
+        "Data leakage leading to biased predictions → resolved by correcting time-based split and target labeling",
+        "Imbalanced prediction outcomes (over-predicting non-churn) → addressed through proper validation and feature adjustments",
+        "Deploying ML model to production → solved using Flask and AWS Elastic Beanstalk"
+      ],
+      outcome: "Achieved an AUC score of 0.96 with logistics regression model which is the highest among the models, delivering a highly accurate churn prediction system that can be integrated into business workflows to proactively reduce customer attrition"
     },
-    link: "https://github.com/opadotun-taiwo/data-visualization",
+    link: "https://github.com/opadotun-taiwo/churn_prediction_production",
     demo: ""
   },
   {
     id: 5,
-    title: "Marketing Cohort Analysis (User Retention)",
-    category: "Marketing Analytics",
-    cover_image: "/images/cohort/main.png",
-    images: ["/images/cohort/1.png", "/images/cohort/2.png"],
-    summary: "Analyzed user retention using cohort analysis to provide actionable marketing insights.",
-    techStack: ["SQL", "Metabase"],
-    story: {
-      objective: "Analyze user retention using cohort analysis",
-      data_source: "Google BigQuery",
-      tools: ["SQL", "Metabase"],
-      modeling: "",
-      approach: "Built cohort SQL model tracking monthly retention",
-      features: "",
-      challenges: [
-        "Mismatch with PostHog → resolved via data audit"
-      ],
-      outcome: "Provided accurate retention insights for marketing decisions"
-    },
-    link: "https://github.com/opadotun-taiwo/RFM",
-    demo: ""
-  },
-  {
-    id: 6,
     title: "RFM Analysis for Customer Segmentation & Revenue Growth",
     category: "Marketing Analytics",
     cover_image: "/images/RFM/main.png",
@@ -174,9 +155,77 @@ const projects = [
     link: "https://github.com/opadotun-taiwo/RFM",
     demo: ""
   },
-
+  {
+    id: 6,
+    title: "Website Performance Analytics – SEO & Conversion Insights",
+    category: "Marketing Analytics",
+    cover_image: "/images/seo/main.png",
+    images: ["/images/seo/1.png", "/images/seo/2.png"],
+    summary: "Combined Google Analytics and Search Console data to evaluate SEO performance, user behavior, and conversion efficiency on the company website.",
+    techStack: ["Looker Studio", "Google Analytics", "Google Search Console"],
+    story: {
+      objective: "Evaluate SEO performance, user experience, and conversion effectiveness to optimize website growth and engagement.",
+      data_source: "Google Analytics & Google Search Console",
+      tools: ["Looker Studio"],
+      modeling: "Blended data model combining traffic, search queries, and user engagement metrics",
+      approach: "Integrated GA and Search Console data in Looker Studio, created calculated fields for conversion and engagement metrics, and designed interactive dashboards to track traffic sources, keyword performance, and user journey",
+      features: "SEO performance tracking (impressions, clicks, CTR), user behavior analysis (sessions, bounce rate), conversion funnel insights, and traffic source breakdown",
+      challenges: [
+        "Combining data from multiple sources with different structures",
+        "Attributing conversions accurately across channels",
+        "Interpreting SEO metrics alongside user behavior data"
+      ],
+      outcome: "Delivered a unified view of SEO and user engagement, enabling stakeholders to identify high-performing channels, optimize content strategy, and improve conversion rates"
+    },
+    link: "https://lookerstudio.google.com/reporting/2f8a5c20-d72c-4ef0-a148-da74e3acc586",
+    demo: ""
+  },
   {
     id: 7,
+    title: "Customer Call Center Analytics",
+    category: "Marketing Analytics",
+    cover_image: "/images/callcenter/main.png",
+    images: ["/images/callcenter/1.png", "/images/callcenter/2.png"],
+    summary: "Evaluated employee efficiency and call utilization through interactive dashboards.",
+    techStack: ["Power BI", "SQL", "Power Query"],
+    story: {
+      objective: "Evaluate employee efficiency and call utilization",
+      data_source: "MySQL Database",
+      tools: ["Power BI", "SQL", "Power Query"],
+      modeling: "Star schema with calendar and manager dimension",
+      approach: "Built slicers and validated results with SQL queries",
+      features: "",
+      challenges: [],
+      outcome: "Improved visibility into call performance and routing efficiency"
+    },
+    link: "https://github.com/opadotun-taiwo/data-visualization",
+    demo: ""
+  },
+  {
+    id: 8,
+    title: "Marketing Cohort Analysis (User Retention)",
+    category: "Marketing Analytics",
+    cover_image: "/images/cohort/main.png",
+    images: ["/images/cohort/1.png", "/images/cohort/2.png"],
+    summary: "Analyzed user retention using cohort analysis to provide actionable marketing insights.",
+    techStack: ["SQL", "Metabase"],
+    story: {
+      objective: "Analyze user retention using cohort analysis",
+      data_source: "Google BigQuery",
+      tools: ["SQL", "Metabase"],
+      modeling: "",
+      approach: "Built cohort SQL model tracking monthly retention",
+      features: "",
+      challenges: [
+        "Mismatch with PostHog → resolved via data audit"
+      ],
+      outcome: "Provided accurate retention insights for marketing decisions"
+    },
+    link: "https://github.com/opadotun-taiwo/RFM",
+    demo: ""
+  },
+  {
+    id: 9,
     title: "NLP-to-SQL Data Interface",
     category: "Business Intelligence",
     cover_image: "/images/nlp/main.png",

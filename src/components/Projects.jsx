@@ -35,7 +35,7 @@ export default function Projects() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-sand-600 dark:text-sand-400 mt-4 max-w-xl mx-auto">
-            Explore my work in data analysis, engineering, and business intelligence
+            Explore my work in data analysis and business intelligence
           </p>
         </motion.div>
 
@@ -51,11 +51,10 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-5 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 ${
-                activeFilter === cat
+              className={`px-5 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 ${activeFilter === cat
                   ? 'btn-primary shadow-none py-2.5 px-5'
                   : 'card text-sand-700 dark:text-sand-300 hover:text-teal-700 dark:hover:text-teal-300'
-              }`}
+                }`}
             >
               {cat}
             </button>
