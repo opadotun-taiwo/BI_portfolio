@@ -9,10 +9,10 @@ import ProjectModal from './ProjectModal';
  * Filterable project cards with teal/coral palette.
  */
 
-const categories = ['Finance Analytics', 'Marketing Analytics', 'Business Intelligence'];
+const categories = ['Product Analytics', 'Marketing Analytics', 'Data Engineering', 'Business Intelligence'];
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState('Finance Analytics');
+  const [activeFilter, setActiveFilter] = useState('Product Analytics');
   const [selectedProject, setSelectedProject] = useState(null);
 
   const filtered = projects.filter((p) => p.category === activeFilter);
@@ -52,8 +52,8 @@ export default function Projects() {
               key={cat}
               onClick={() => setActiveFilter(cat)}
               className={`px-5 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 ${activeFilter === cat
-                  ? 'btn-primary shadow-none py-2.5 px-5'
-                  : 'card text-sand-700 dark:text-sand-300 hover:text-teal-700 dark:hover:text-teal-300'
+                ? 'btn-primary shadow-none py-2.5 px-5'
+                : 'card text-sand-700 dark:text-sand-300 hover:text-teal-700 dark:hover:text-teal-300'
                 }`}
             >
               {cat}
@@ -96,7 +96,7 @@ function ProjectCard({ project, onClick }) {
   const [imgError, setImgError] = useState(false);
 
   const categoryStyles = {
-    'Finance Analytics': {
+    'Product Analytics': {
       badge: 'bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300',
       emoji: '📈',
     },
@@ -108,6 +108,10 @@ function ProjectCard({ project, onClick }) {
     'Business Intelligence': {
       badge: 'bg-coral-100 text-coral-700 dark:bg-coral-500/15 dark:text-coral-300',
       emoji: '💡',
+    },
+    'Data Engineering': {
+      badge: 'bg-teal-200/60 text-teal-900 dark:bg-teal-800/30 dark:text-teal-200',
+      emoji: '⚙️',
     },
   };
 

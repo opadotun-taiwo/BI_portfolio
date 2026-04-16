@@ -9,7 +9,7 @@ const projects = [
   {
     id: 1,
     title: "Loan Application Analytics – Credit Risk Monitoring",
-    category: "Finance Analytics",
+    category: "Product Analytics",
     cover_image: "/images/loan/main.png",
     images: [
       "/images/loan/1.png",
@@ -41,11 +41,10 @@ const projects = [
     link: "https://github.com/opadotun-taiwo/creadit_risk_monitoring",
     demo: "https://youtu.be/IMsZshdzN9I"
   },
-  ,
   {
     id: 2,
     title: "Family Spending Analysis & Tax Liability Dashboard",
-    category: "Finance Analytics",
+    category: "Product Analytics",
     cover_image: "/images/family/main.png",
     images: ["/images/family/1.png", "/images/family/2.png"],
     summary: "Built an interactive dashboard to track family spending patterns and compute monthly tax liability based on Nigeria’s tax framework.",
@@ -70,7 +69,7 @@ const projects = [
   {
     id: 3,
     title: "Sales Forecasting with SARIMA – HelloPay",
-    category: "Finance Analytics",
+    category: "Product Analytics",
     cover_image: "/images/arima/main.png",
     images: ["/images/arima/main.png", "/images/arima/main.png"],
     summary: "Developed a SARIMA-based time series model to forecast monthly sales for a fintech application, incorporating seasonality and trend analysis for accurate year-ahead projections.",
@@ -95,7 +94,7 @@ const projects = [
   {
     id: 4,
     title: "Customer Churn Prediction – Production ML Model Hellopay",
-    category: "Finance Analytics",
+    category: "Product Analytics",
     cover_image: "/images/churn/main.png",
     images: ["/images/churn/1.png", "/images/churn/2.png"],
     summary: "Built and deployed a production-grade churn prediction model using Logistic Regression, achieving high predictive performance and enabling proactive customer retention strategies.",
@@ -246,6 +245,51 @@ const projects = [
       outcome: "Democratized data access across teams and delivered a production-ready Docker image that enabled seamless integration and adoption by the development team"
     },
     link: "https://github.com/opadotun-taiwo/NLP_datawarehouse",
+    demo: ""
+  },
+  {
+    id: 10,
+    title: "Weather ELT Data Pipeline",
+    category: "Data Engineering",
+    cover_image: "/images/weather/main.png",
+    images: ["/images/weather/1.png", "/images/weather/2.png"],
+    summary: "Built an automated daily weather analytics pipeline from API to warehouse.",
+    techStack: ["Python", "Docker", "Airflow", "BigQuery", "dbt"],
+    story: {
+      objective: "Build ELT pipeline from API to warehouse",
+      data_source: "USA Weather API",
+      tools: ["Python", "Docker", "Airflow", "BigQuery", "dbt", "Superset"],
+      modeling: "",
+      approach: "API ingestion(Python script) → warehouse(Big query) → transformation(dbt) → orchestration(Airflow) + Visualization (Superset)",
+      features: "",
+      challenges: [],
+      outcome: "Automated daily weather analytics pipeline"
+    },
+    link: "https://github.com/opadotun-taiwo/modern-elt-bigquery",
+    demo: ""
+  },
+  {
+    id: 11,
+    title: "Monthly ELT batch data processing for NYC Taxi Data Pipeline (GCP)",
+    category: "Data Engineering",
+    cover_image: "/images/taxi/main.png",
+    images: ["/images/taxi/1.png", "/images/taxi/2.png"],
+    summary: "Built production-grade pipeline for large-scale taxi data with schema modeling for BI reporting and ML.",
+    techStack: ["dlt", "dbt", "BigQuery", "GCS", "Python", "Superset"],
+    story: {
+      objective: "Build production-grade pipeline for large-scale taxi data",
+      data_source: "NYC taxi data",
+      tools: ["dlt", "BigQuery", "GCS", "Python", "Superset"],
+      modeling: "",
+      approach: "Idempotent ingestion + schema evolution(dlt) + GCS (data staging) + Data warehousing (Big query) +schema modeling for reporting and ml feature model (dbt) + Orchestration (Airflow) + Visualization (Superset)",
+      features: "",
+      challenges: [
+        "Large file handling",
+        "Preventing duplicates"
+      ],
+      outcome: "Scalable analytics-ready data platform"
+    },
+    link: "https://github.com/opadotun-taiwo/data_eng_end_to_end_GCP",
     demo: ""
   }
 ];
