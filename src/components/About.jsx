@@ -10,7 +10,7 @@ import { HiBriefcase, HiAcademicCap, HiLightBulb } from 'react-icons/hi';
 const highlights = [
   {
     icon: HiBriefcase,
-    title: '3+ Years',
+    title: '4+ Years',
     desc: 'Professional experience in data analytics and BI',
     accent: 'from-teal-700 to-teal-500',
   },
@@ -57,7 +57,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-lg text-sand-600 dark:text-sand-300 leading-relaxed mb-6">
-              I help organizations turn raw data into revenue-driving products. With 3+ years of experience, I’ve worked with large-scale datasets supporting businesses generating over <strong className="text-coral-500 dark:text-coral-400">₦12B+ in monthly revenue</strong>.
+              I help organizations turn raw data into revenue-driving products. With 4+ years of experience, I’ve worked with large-scale datasets supporting businesses generating over <strong className="text-coral-500 dark:text-coral-400">₦12B+ in monthly revenue</strong>.
             </p>
 
             <p className="text-sand-600 dark:text-sand-300 leading-relaxed mb-6">

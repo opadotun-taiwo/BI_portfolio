@@ -90,7 +90,7 @@ export default function Hero() {
           className="text-base sm:text-lg text-sand-600 dark:text-sand-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Looking for someone to turn your data into structured, revenue-driving products?
-          I have spent the last 3+ years helping companies build data solutions that improve operations and generate real business impact. <br /><strong>#Google Cloud Certified</strong>
+          I have spent the last 4+ years helping companies build data solutions that improve operations and generate real business impact. <br /><strong>#Google Cloud Certified</strong>
         </motion.p>
 
         {/* CTAs */}

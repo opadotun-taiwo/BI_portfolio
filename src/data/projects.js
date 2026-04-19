@@ -42,7 +42,43 @@ const projects = [
     demo: "https://youtu.be/IMsZshdzN9I"
   },
   {
-    id: 2,
+    "id": 2,
+    "title": "Behavioral Economics in AgTech: SMS Nudge A/B Testing",
+    "category": "Product Analytics",
+    "cover_image": "/images/oneacre/main.png",
+    "images": [
+      "/images/oneacre/main.png",
+      "/images/oneacre/1.png",
+      "/images/oneacre/2.png"
+    ],
+    "summary": "Designed and analyzed a Randomized Controlled Trial (RCT) to measure the impact of SMS reminders on smallholder farmer loan repayment, resulting in a 55% increase in repayment rates.",
+
+    "techStack": ["Python", "SciPy", "Statsmodels", "Seaborn", "Pandas"],
+
+    "story": {
+      "objective": "To determine if low-cost SMS reminders significantly improve loan repayment rates and input adoption among farmers, ensuring the intervention's success was not due to random chance.",
+
+      "data_source": "Experimental dataset containing 50 farmer profiles (25 Treatment, 25 Control) with multi-year yield, income, and repayment metrics.",
+
+      "tools": ["Python", "Seaborn", "SciPy (T-Test, Chi-Square)", "Statsmodels (Power Analysis)"],
+
+      "modeling": "Randomized Controlled Trial (RCT) framework using Independent T-Tests for continuous metrics and Chi-Square tests for categorical adoption metrics.",
+
+      "approach": "Performed a post-hoc power analysis to validate sample size (N=50). Calculated Cohen's d to measure effect size magnitude. Conducted deep-dive segmentation by crop type and region to ensure intervention robustness across variables.",
+
+      "features": "Statistical significance validation (p-value < 0.05), Power analysis (80% power at 5% MDE), Cohen's d effect size calculation, and impact visualization for yield/income growth.",
+
+      "challenges": [
+        "Small Sample Size (N=50) → Validated reliability through power analysis showing required N was only 12 due to massive effect size.",
+        "Confounding Variables → Analyzed training attendance and crop types to ensure SMS was the primary driver of behavior change.",
+        "Proving Causality → Used the 'Null Hypothesis' framework to mathematically reject the possibility of random fluke results."
+      ],
+
+      "outcome": "Observed an astronomical effect size (Cohen's d = 8.01) and a repayment lift from 60% to 93%. Recommended full-scale deployment of the SMS system, projecting a significant reduction in bad debt for the organization."
+    }
+  },
+  {
+    id: 3,
     title: "Family Spending Analysis & Tax Liability Dashboard",
     category: "Product Analytics",
     cover_image: "/images/family/main.png",
@@ -67,7 +103,7 @@ const projects = [
     demo: "https://youtu.be/xzZHbj5bCY8"
   },
   {
-    id: 3,
+    id: 4,
     title: "Sales Forecasting with SARIMA – HelloPay",
     category: "Product Analytics",
     cover_image: "/images/arima/main.png",
@@ -92,7 +128,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 4,
+    id: 5,
     title: "Customer Churn Prediction – Production ML Model Hellopay",
     category: "Product Analytics",
     cover_image: "/images/churn/main.png",
@@ -117,7 +153,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 5,
+    id: 6,
     title: "RFM Analysis for Customer Segmentation & Revenue Growth",
     category: "Marketing Analytics",
     cover_image: "/images/RFM/main.png",
@@ -155,7 +191,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 6,
+    id: 7,
     title: "Website Performance Analytics – SEO & Conversion Insights",
     category: "Marketing Analytics",
     cover_image: "/images/seo/main.png",
@@ -180,7 +216,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 7,
+    id: 8,
     title: "Customer Call Center Analytics",
     category: "Marketing Analytics",
     cover_image: "/images/callcenter/main.png",
@@ -201,7 +237,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 8,
+    id: 9,
     title: "Marketing Cohort Analysis (User Retention)",
     category: "Marketing Analytics",
     cover_image: "/images/cohort/main.png",
@@ -224,7 +260,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 9,
+    id: 10,
     title: "NLP-to-SQL Data Interface",
     category: "Business Intelligence",
     cover_image: "/images/nlp/main.png",
@@ -248,7 +284,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 10,
+    id: 11,
     title: "Weather ELT Data Pipeline",
     category: "Data Engineering",
     cover_image: "/images/weather/main.png",
@@ -269,7 +305,7 @@ const projects = [
     demo: ""
   },
   {
-    id: 11,
+    id: 12,
     title: "Monthly ELT batch data processing for NYC Taxi Data Pipeline (GCP)",
     category: "Data Engineering",
     cover_image: "/images/taxi/main.png",
